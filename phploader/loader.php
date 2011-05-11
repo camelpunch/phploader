@@ -1308,7 +1308,12 @@ class YAHOO_util_Loader
                 //of the upcoming dependencies
                 if (isset($dep[YUI_AFTER])) {
                     $after = $dep[YUI_AFTER];
-                    
+
+                    // fix from http://yuilibrary.com/projects/phploader/ticket/24
+                    if (!is_array($after)) {
+                        $after = array($after);
+                    }
+
                     foreach ($after as $a) {
                         if (in_array($a, $notdone)) {
                             $newreqs[$a] = true;
