@@ -1,0 +1,42 @@
+{
+    "scrollview" : {
+    
+        "plugins" : {
+            "scrollview-base" : {
+                "requires" : [
+                    "widget",
+                    "event-gestures",
+                    "transition"
+                ],
+                "skinnable" : true,
+                "path": "scrollview/scrollview-base-min.js"
+            },
+            "scrollview-base-ie": {
+                "requires": [
+                    "scrollview-base"
+                ],
+                "condition": {
+                   "trigger": "scrollview-base",
+                   "ua": "ie"
+                }
+            },
+            "scrollview-scrollbars" : {
+                "requires" : [
+                    "plugin"
+                ],
+                "skinnable" : true,
+                "path": "scrollview/scrollview-scrollbars-min.js"
+            },
+            "scrollview-paginator" : {
+                "requires" : [
+                    "plugin"
+                ],
+                "path": "scrollview/scrollview-paginator-min.js"
+            }
+        },
+        "requires" : [
+            "scrollview-base",
+            "scrollview-scrollbars"
+        ]
+    }
+}

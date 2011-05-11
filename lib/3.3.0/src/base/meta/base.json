@@ -1,0 +1,25 @@
+{
+    "base": {
+        "submodules": {
+            "base-base": {
+                "requires": [
+                    "attribute-base"
+                ],
+                "after": [
+                    "attribute-complex"
+                ]
+            },
+            "base-build": {
+                "requires": [
+                    "base-base"
+                ]
+            }, 
+            "base-pluginhost": {
+                "requires": [
+                    "base-base", 
+                    "pluginhost"
+                ]
+            }
+        }
+    }
+}

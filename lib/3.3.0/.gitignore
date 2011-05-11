@@ -1,0 +1,8 @@
+build_tmp*/
+build_rollup_tmp*/
+tmp/
+CVS/
+.DS_Store
+.*.swp
+.svn
+*~

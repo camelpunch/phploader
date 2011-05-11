@@ -1,0 +1,69 @@
+{
+    "dom": {
+        "plugins": {
+            "selector-css3": {
+                "requires": [
+                    "selector-native",
+                    "selector-css2"
+                ]
+            },
+            "dom-style-ie": {
+                "requires": [
+                    "dom-style"
+                ],
+                "condition": {
+                   "trigger": "dom-style",
+                   "test": "ie-style-test.js"
+                }
+            },
+
+            "dom-deprecated": {
+                "requires": [
+                    "dom-base"
+                ]
+            },
+
+            "selector-css2": {
+                "requires": [
+                    "selector-native"
+                ],
+                "condition": {
+                   "trigger": "selector",
+                   "test": "selector-test.js"
+                }
+            }
+        },
+        "requires": [
+            "oop"
+        ],
+        "submodules": {
+            "dom-base": {
+                "requires": [
+                    "oop",
+                    "features"
+                ]
+            },
+            "dom-screen": {
+                "requires": [
+                    "dom-base",
+                    "dom-style"
+                ]
+            },
+            "dom-style": {
+                "requires": [
+                    "dom-base"
+                ]
+            },
+            "selector-native": {
+                "requires": [
+                    "dom-base"
+                ]
+            },
+            "selector": {
+                "requires": [
+                    "selector-native"
+                ]
+            }
+        }
+    }
+}
