@@ -29,7 +29,10 @@
 require "./combo_functions.inc.php";
 
 //Web accessible path to the YUI PHP loader lib directory (Override as needed)
-define("PATH_TO_LIB", server() . "/phploader/lib/"); 
+$server = server();
+
+$server = str_replace(':443', '', $server);
+define("PATH_TO_LIB", $server . "/lib/");
 
 //APC Configuration
 define("APC_AVAIL", function_exists('apc_fetch') ? true : false);
